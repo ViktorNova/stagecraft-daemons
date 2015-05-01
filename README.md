@@ -6,9 +6,9 @@ Stagecraft OS uses [Monit](http://mmonit.com/monit/) to create system services o
 
 
   - JACK audio/MIDI system (jackd)
-  - Global audio/MIDI patchbay persistence (a modified aj-snapshot)
-  - Global plugins, synthesizers, etc., which persist from song to song
-  - JACK <-> ALSA MIDI conversion (a2jmidid)
+  - **Global audio/MIDI patchbay persistence (a modified aj-snapshot)**
+  - **Global plugins, synthesizers, etc., which persist from song to song**
+  - **JACK <-> ALSA MIDI conversion (a2jmidid)**
   - Stagecraft Show Manager (SSM web interface and nsmd)
   - ??
 
