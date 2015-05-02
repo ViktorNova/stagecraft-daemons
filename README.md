@@ -1,5 +1,5 @@
 # stagecraft-daemons
-This is a collection of the various pro system services for multimedia performances, used by Stagecraft OS. They can also be used by other Linux distributions with little modification
+This is a collection of the various pro-audio/show performance-related system services for multimedia performances, used by Stagecraft OS. They can also be used by other Linux distributions with little modification
 
 ##What is this for?
 Stagecraft OS uses [Monit](http://mmonit.com/monit/) to create system services out of programs which are typically started manually, to ensure that they are always ready to run your show. Monit starts them on boot, and will automatically restart them should they somehow crash or encounter a serious error. 
