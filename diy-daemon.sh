@@ -1,10 +1,5 @@
-#!/bin/bash
-
-SCRIPT="xterm"
-
-
-while $SCRIPT
-do
-$SCRIPT
-sleep 1
+#!/usr/bin/bash
+while true
+  do $script
+  sleep 1
 done

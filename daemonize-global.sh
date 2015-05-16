@@ -1,13 +1,11 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Path is the directory that contains all the scripts you want to run on boot
-PATH="~/SYSTEM/GLOBAL/DAEMONS"
+DAEMONS_PATH="/home/n0va/Dev/stagecraft-daemons/daemons"
 
 # Run every script in the folder
-for SCRIPT in /path/to/scripts/dir/*
+for script in $DAEMONS_PATH/*
   do
-	  if [ -f $SCRIPT -a -x $SCRIPT ]
-		then
-			$SCRIPT
-		fi
-	done
+    #export script=$script
+    script=$script ./diy-daemon.sh &
+  done

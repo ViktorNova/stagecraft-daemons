@@ -11,7 +11,16 @@ Stagecraft OS uses [Daemonize](http://software.clapper.org/daemonize/daemonize.h
   - Stagecraft Show Manager (SSM web interface and nsmd)
   - ??
 
-##Why Daemonize?
+##How to use it
+
+
+
+
+On Stagecraft OS, this is installed by default.
+
+
+
+###Why Daemonize?
 System services in Linux are typically handled using the init (boot) system, which varies from distro to distro (such as systemd, sysvinit, upstart, etc.), and are tied into the core of the OS. There are also other solutions for managing daemons like Supervisor, Forever, pm2, Monit, Circus, God, etc. 
 
 Daemonize was chosen because of it's extreme simplicity.
