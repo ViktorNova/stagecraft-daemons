@@ -28,11 +28,9 @@ From there you can manually close/kill your global apps and they will not respaw
 
 
 
-###Why Daemonize?
-System services in Linux are typically handled using the init (boot) system, which varies from distro to distro (such as systemd, sysvinit, upstart, etc.), and are tied into the core of the OS. There are also other solutions for managing daemons like Supervisor, Forever, pm2, Monit, Circus, God, etc. 
+###Why this hacked together bash solution?
+While true that there are also other solutions for managing daemons like Supervisor, Forever, PM2, Guvnor, Monit, Circus, God, etc., this script was chosen because of it's extreme simplicity. It is very easy even for beginners to set up new daemons that run at boot. Additionally, it is cross-platform and runs on OS X, BSDs, and more. It is tiny and has minimal dependencies. This will allow parts of Stagecraft OS to be easily ported to other distributions and operating systems, as well as making it trivial to interoperate with other computers in a show setup which are not running Stagecraft OS.
 
-Daemonize was chosen because of it's extreme simplicity.
+It will probably be replaced soon with either Guvnor or PM2, which are both Node.js based process managers with web interfaces.
 
-It is very easy even for beginners to set up new daemons that run at boot. Additionally, it is cross-platform and runs on OS X, BSDs, and more. It is tiny and has minimal dependencies. This will allow parts of Stagecraft OS to be easily ported to other distributions and operating systems, as well as making it trivial to interoperate with other computers in a show setup which are not running Stagecraft OS.
 
-Note: Runit was originally used instead of Daemonize,but was ditched because of it's non-intuitive/confusing configuration. Since Stagecraft OS's primary goal is to be user friendly for non-geeks, Daemonize was the clear choice
