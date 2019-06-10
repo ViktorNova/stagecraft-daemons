@@ -1,0 +1,993 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- MIDI Through -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>TO IPAD</Name>
+   <Label>midithrough</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+  </Data>
+ </Plugin>
+
+ <!-- Fabla -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Fabla-Toms</Name>
+   <URI>http://www.openavproductions.com/fabla</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>1.128522</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1e1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Master</Name>
+    <Symbol>volume</Symbol>
+    <Value>0.93010801076889</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Compressor Attack</Name>
+    <Symbol>compressor_attack</Symbol>
+    <Value>0.150000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Compressor Decay</Name>
+    <Symbol>compressor_decay</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Compressor Threshold</Name>
+    <Symbol>compressor_threshold</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Compressor Ratio</Name>
+    <Symbol>compressor_ratio</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Compressor Makeup</Name>
+    <Symbol>compressor_makeup</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Compressor Enable</Name>
+    <Symbol>compressor_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Gain 1</Name>
+    <Symbol>pad_gain_1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Gain 2</Name>
+    <Symbol>pad_gain_2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Gain 3</Name>
+    <Symbol>pad_gain_3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Gain 4</Name>
+    <Symbol>pad_gain_4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Gain 5</Name>
+    <Symbol>pad_gain_5</Symbol>
+    <Value>0.439999997615814</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Gain 6</Name>
+    <Symbol>pad_gain_6</Symbol>
+    <Value>0.379999995231628</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Gain 7</Name>
+    <Symbol>pad_gain_7</Symbol>
+    <Value>0.479999989271164</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Gain 8</Name>
+    <Symbol>pad_gain_8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Gain 9</Name>
+    <Symbol>pad_gain_9</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Gain 10</Name>
+    <Symbol>pad_gain_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Gain 11</Name>
+    <Symbol>pad_gain_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Gain 12</Name>
+    <Symbol>pad_gain_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Gain 13</Name>
+    <Symbol>pad_gain_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Gain 14</Name>
+    <Symbol>pad_gain_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Gain 15</Name>
+    <Symbol>pad_gain_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Gain 16</Name>
+    <Symbol>pad_gain_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Speed 1</Name>
+    <Symbol>pad_speed_1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Speed 2</Name>
+    <Symbol>pad_speed_2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Speed 3</Name>
+    <Symbol>pad_speed_3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Speed 4</Name>
+    <Symbol>pad_speed_4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Speed 5</Name>
+    <Symbol>pad_speed_5</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Speed 6</Name>
+    <Symbol>pad_speed_6</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Speed 7</Name>
+    <Symbol>pad_speed_7</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Speed 8</Name>
+    <Symbol>pad_speed_8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Speed 9</Name>
+    <Symbol>pad_speed_9</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Speed 10</Name>
+    <Symbol>pad_speed_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Speed 11</Name>
+    <Symbol>pad_speed_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Speed 12</Name>
+    <Symbol>pad_speed_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Speed 13</Name>
+    <Symbol>pad_speed_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Speed 14</Name>
+    <Symbol>pad_speed_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Speed 15</Name>
+    <Symbol>pad_speed_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Speed 16</Name>
+    <Symbol>pad_speed_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Pan 1</Name>
+    <Symbol>pad_pan_1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Pan 2</Name>
+    <Symbol>pad_pan_2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Pan 3</Name>
+    <Symbol>pad_pan_3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Pan 4</Name>
+    <Symbol>pad_pan_4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Pan 5</Name>
+    <Symbol>pad_pan_5</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Pan 6</Name>
+    <Symbol>pad_pan_6</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Pan 7</Name>
+    <Symbol>pad_pan_7</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Pan 8</Name>
+    <Symbol>pad_pan_8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Pan 9</Name>
+    <Symbol>pad_pan_9</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Pan 10</Name>
+    <Symbol>pad_pan_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Pan 11</Name>
+    <Symbol>pad_pan_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Pan 12</Name>
+    <Symbol>pad_pan_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Pan 13</Name>
+    <Symbol>pad_pan_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Pan 14</Name>
+    <Symbol>pad_pan_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>Pan 15</Name>
+    <Symbol>pad_pan_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>Pan 16</Name>
+    <Symbol>pad_pan_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Attack 1</Name>
+    <Symbol>pad_attack_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Attack 2</Name>
+    <Symbol>pad_attack_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Attack 3</Name>
+    <Symbol>pad_attack_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Attack 4</Name>
+    <Symbol>pad_attack_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Attack 5</Name>
+    <Symbol>pad_attack_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>Attack 6</Name>
+    <Symbol>pad_attack_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Attack 7</Name>
+    <Symbol>pad_attack_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>Attack 8</Name>
+    <Symbol>pad_attack_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>Attack 9</Name>
+    <Symbol>pad_attack_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Attack 10</Name>
+    <Symbol>pad_attack_10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Attack 11</Name>
+    <Symbol>pad_attack_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Attack 12</Name>
+    <Symbol>pad_attack_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>Attack 13</Name>
+    <Symbol>pad_attack_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Attack 14</Name>
+    <Symbol>pad_attack_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Attack 15</Name>
+    <Symbol>pad_attack_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Attack 16</Name>
+    <Symbol>pad_attack_16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Decay 1</Name>
+    <Symbol>pad_decay_1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>Decay 2</Name>
+    <Symbol>pad_decay_2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Decay 3</Name>
+    <Symbol>pad_decay_3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>Decay 4</Name>
+    <Symbol>pad_decay_4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Decay 5</Name>
+    <Symbol>pad_decay_5</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Decay 6</Name>
+    <Symbol>pad_decay_6</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Decay 7</Name>
+    <Symbol>pad_decay_7</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Decay 8</Name>
+    <Symbol>pad_decay_8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Decay 9</Name>
+    <Symbol>pad_decay_9</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Decay 10</Name>
+    <Symbol>pad_decay_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>Decay 11</Name>
+    <Symbol>pad_decay_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>Decay 12</Name>
+    <Symbol>pad_decay_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>Decay 13</Name>
+    <Symbol>pad_decay_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>Decay 14</Name>
+    <Symbol>pad_decay_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>Decay 15</Name>
+    <Symbol>pad_decay_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>Decay 16</Name>
+    <Symbol>pad_decay_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>Sustain 1</Name>
+    <Symbol>pad_sustain_1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>Sustain 2</Name>
+    <Symbol>pad_sustain_2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>Sustain 3</Name>
+    <Symbol>pad_sustain_3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>Sustain 4</Name>
+    <Symbol>pad_sustain_4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Sustain 5</Name>
+    <Symbol>pad_sustain_5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Sustain 6</Name>
+    <Symbol>pad_sustain_6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Sustain 7</Name>
+    <Symbol>pad_sustain_7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>Sustain 8</Name>
+    <Symbol>pad_sustain_8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>Sustain 9</Name>
+    <Symbol>pad_sustain_9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>Sustain 10</Name>
+    <Symbol>pad_sustain_10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>Sustain 11</Name>
+    <Symbol>pad_sustain_11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>Sustain 12</Name>
+    <Symbol>pad_sustain_12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>Sustain 13</Name>
+    <Symbol>pad_sustain_13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>Sustain 14</Name>
+    <Symbol>pad_sustain_14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>Sustain 15</Name>
+    <Symbol>pad_sustain_15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>102</Index>
+    <Name>Sustain 16</Name>
+    <Symbol>pad_sustain_16</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>Release 1</Name>
+    <Symbol>pad_release_1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>Release 2</Name>
+    <Symbol>pad_release_2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>Release 3</Name>
+    <Symbol>pad_release_3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>Release 4</Name>
+    <Symbol>pad_release_4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>Release 5</Name>
+    <Symbol>pad_release_5</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>Release 6</Name>
+    <Symbol>pad_release_6</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>109</Index>
+    <Name>Release 7</Name>
+    <Symbol>pad_release_7</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>Release 8</Name>
+    <Symbol>pad_release_8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>Release 9</Name>
+    <Symbol>pad_release_9</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>Release 10</Name>
+    <Symbol>pad_release_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>Release 11</Name>
+    <Symbol>pad_release_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>Release 12</Name>
+    <Symbol>pad_release_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>Release 13</Name>
+    <Symbol>pad_release_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>116</Index>
+    <Name>Release 14</Name>
+    <Symbol>pad_release_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>Release 15</Name>
+    <Symbol>pad_release_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>Release 16</Name>
+    <Symbol>pad_release_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://www.openavproductions.com/fabla#pad_2_filename</Key>
+    <Value>/home/stagecraft/SAMPLES/DRUM/TOMS/Tom-SC88 1.wav</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://www.openavproductions.com/fabla#pad_3_filename</Key>
+    <Value>/home/stagecraft/SAMPLES/DRUM/TOMS/Tom-SC88 3.wav</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://www.openavproductions.com/fabla#pad_4_filename</Key>
+    <Value>/home/stagecraft/SAMPLES/DRUM/TOMS/Tom-SC88 4.wav</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://www.openavproductions.com/fabla#pad_5_filename</Key>
+    <Value>/home/stagecraft/SAMPLES/DRUM/TOMS/Tom-SC88 5.wav</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://www.openavproductions.com/fabla#pad_6_filename</Key>
+    <Value>/home/stagecraft/SAMPLES/DRUM/TOMS/Tom-SC88 6.wav</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>a2j:Vortex Wireless (capture): Vortex Wireless MIDI 1</Source>
+   <Target>a2j:MIDI ROUTER - Vortex Keytar (playback): MIDI ROUTER - Vortex Keytar</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MT4 (capture): MT4 MIDI 1</Source>
+   <Target>a2j:MIDI ROUTER - Vortex Keytar (playback): MIDI ROUTER - Vortex Keytar</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MIDI ROUTER - Vortex Keytar (capture): out 1</Source>
+   <Target>a2j:MIDI ROUTER - To Venom (playback): MIDI ROUTER - To Venom</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MIDI ROUTER - Vortex Keytar (capture): out 2</Source>
+   <Target>GLOBAL-DRUMS:TO IPAD:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MIDI ROUTER - To Venom (capture): out 1</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 1</Target>
+  </Connection>
+  <Connection>
+   <Source>jack_midi_clock:mclk_out</Source>
+   <Target>a2j:MT4 (playback): MT4 Broadcast</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.nQNKE:Fabla - Mirror Mirror:Audio Output Left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>drumkv1:out_1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>drumkv1:out_2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>jack_midi_clock-01:mclk_out</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:VENOM_out</Source>
+   <Target>a2j:MIDI ROUTER - To Venom (playback): MIDI ROUTER - To Venom</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:iPad Synth_out</Source>
+   <Target>GLOBAL-DRUMS:TO IPAD:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:Rack FX_out</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:Vocal FX - Voice Prism_out</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 1</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:DRUMS - MirrorMirror_out</Source>
+   <Target>Carla.nQNKE:Fabla - Mirror Mirror:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:DRUMS - Global_out</Source>
+   <Target>drumkv1:in</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:DRUMS - Global Toms_out</Source>
+   <Target>GLOBAL-DRUMS:Fabla-Toms:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>LOS:GUITAR - Kemper RIG_out</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:TO IPAD:events-out</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 2</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:Fabla-Toms:Audio Output Left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.nQNKE:TAP Reverberator:Output Left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

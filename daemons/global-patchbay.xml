@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<aj-snapshot>
 <alsa>
   <client name="System">
     <port id="0" />
     <port id="1" />
   </client>
   <client name="Midi Through">
-    <port id="0">
-      <connection client="qlcplus" port="0" />
-    </port>
-  </client>
-  <client name="MT4">
     <port id="0" />
+  </client>
+  <client name="MIDI ROUTER - To Venom">
     <port id="1" />
     <port id="2" />
   </client>
-  <client name="iS202">
+  <client name="QmidiNet">
     <port id="0" />
-  </client>
-  <client name="MidiSport 4x4">
-    <port id="0" />
-    <port id="1" />
-    <port id="2" />
-    <port id="3" />
-  </client>
-  <client name="a2jmidid" />
-  <client name="MIDI ROUTER - Keystation 49">
-    <port id="1" />
-    <port id="2" />
   </client>
   <client name="MIDI ROUTER - Drums IN">
     <port id="1" />
@@ -35,121 +22,101 @@
     <port id="4" />
     <port id="5" />
   </client>
-  <client name="MIDI ROUTER - To Venom">
-    <port id="1" />
-    <port id="2" />
-  </client>
   <client name="MIDI ROUTER - Vortex Keytar">
-    <port id="1" />
+    <port id="1">
+      <connection client="MIDI ROUTER - To Venom" port="0" />
+    </port>
     <port id="2" />
     <port id="3" />
     <port id="4" />
   </client>
-  <client name="qlcplus">
-    <port id="0" />
-  </client>
+  <client name="drumkv1" />
+  <client name="a2jmidid" />
 </alsa>
 <jack>
-  <client name="a2j">
-    <port name="Midi Through (capture): Midi Through Port-0" />
-    <port name="MT4 (capture): MT4 MIDI 1">
-      <connection
-port="a2j:MIDI ROUTER - Vortex Keytar (playback): MIDI ROUTER - Vortex Keytar" />
-    </port>
-    <port name="MT4 (capture): MT4 MIDI 2" />
-    <port name="iS202 (capture): iS202 MIDI 1" />
-    <port name="MidiSport 4x4 (capture): MidiSport 4x4 MIDI 1" />
-    <port name="MidiSport 4x4 (capture): MidiSport 4x4 MIDI 2" />
-    <port name="MidiSport 4x4 (capture): MidiSport 4x4 MIDI 4" />
-  </client>
-  <client name="GLOBAL-EFFECTS">
-    <port name="TAP Reverberator:Output Left" />
-    <port name="TAP Reverberator:Output Right" />
-    <port name="GLOBAL REVERB:Out L">
+  <client name="drumkv1">
+    <port name="out_1">
       <connection port="system:playback_1" />
       <connection port="system:playback_2" />
     </port>
-    <port name="GLOBAL REVERB:Out R" />
-    <port name="GLOBAL REVERB:events-out" />
+    <port name="out_2">
+      <connection port="system:playback_2" />
+      <connection port="system:playback_1" />
+    </port>
   </client>
-  <client name="GLOBAL-DRUMS">
-    <port name="Fabla-Kicks:Audio Output Left">
-      <connection port="system:playback_1" />
-    </port>
-    <port name="Fabla-Kicks:Audio Output Right" />
-    <port name="Fabla-Snares:Audio Output Left">
-      <connection port="system:playback_1" />
-    </port>
-    <port name="Fabla-Snares:Audio Output Right">
-      <connection port="GLOBAL-EFFECTS:GLOBAL REVERB:In L" />
-    </port>
-    <port name="Fabla-Hats:Audio Output Left">
-      <connection port="system:playback_1" />
-    </port>
-    <port name="Fabla-Hats:Audio Output Right" />
-    <port name="Fabla-FX:Audio Output Left">
-      <connection port="system:playback_1" />
-    </port>
-    <port name="Fabla-FX:Audio Output Right">
-      <connection port="GLOBAL-EFFECTS:GLOBAL REVERB:In L" />
-    </port>
-    <port name="TO IPAD:events-out">
-      <connection port="a2j:iS202 (playback): iS202 MIDI 1" />
+  <client name="REAPER">
+    <port name="MIDI Output 1">
       <connection
-port="a2j:MIDI ROUTER - Keystation 49 (playback): MIDI ROUTER - Keystation 49" />
+port="a2j:MIDI ROUTER - To Venom [128] (playback): MIDI ROUTER - To Venom" />
     </port>
-    <port name="Fabla-Toms:Audio Output Left">
+    <port name="MIDI Output 2">
+      <connection port="TO IPAD:events-in" />
+    </port>
+    <port name="MIDI Output 3" />
+    <port name="MIDI Output 4" />
+    <port name="MIDI Output 5" />
+    <port name="MIDI Output 8" />
+    <port name="MIDI Output 9">
+      <connection port="drumkv1:in" />
+    </port>
+    <port name="MIDI Output 10">
+      <connection port="Fabla-Toms:events-in" />
+    </port>
+    <port name="MIDI Output 16" />
+    <port name="MIDI Output 17" />
+    <port name="out1">
       <connection port="system:playback_1" />
     </port>
-    <port name="Fabla-Toms:Audio Output Right">
-      <connection port="GLOBAL-EFFECTS:GLOBAL REVERB:In L" />
+    <port name="out2">
+      <connection port="system:playback_2" />
     </port>
+    <port name="out3">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="out4">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+  <client name="GLOBAL REVERB">
+    <port name="Out L">
+      <connection port="system:playback_1" />
+      <connection port="system:playback_2" />
+    </port>
+    <port name="Out R" />
+    <port name="events-out" />
   </client>
   <client name="a2j">
-    <port name="MIDI ROUTER - Keystation 49 (capture): out 1" />
-    <port name="MIDI ROUTER - Keystation 49 (capture): out 2" />
-    <port name="MIDI ROUTER - Drums IN (capture): out 1">
-      <connection port="GLOBAL-DRUMS:Fabla-Kicks:events-in" />
-    </port>
-    <port name="MIDI ROUTER - Drums IN (capture): out 2">
-      <connection port="GLOBAL-DRUMS:Fabla-Snares:events-in" />
-    </port>
-    <port name="MIDI ROUTER - Drums IN (capture): out 3">
-      <connection port="GLOBAL-DRUMS:Fabla-Hats:events-in" />
-    </port>
-    <port name="MIDI ROUTER - Drums IN (capture): out 4">
-      <connection port="GLOBAL-DRUMS:Fabla-FX:events-in" />
-    </port>
-    <port name="MIDI ROUTER - Drums IN (capture): out 5" />
-    <port name="MIDI ROUTER - To Venom (capture): out 1">
-      <connection port="a2j:MT4 (playback): MT4 MIDI 1" />
-    </port>
-    <port name="MIDI ROUTER - To Venom (capture): out 2" />
-    <port name="MIDI ROUTER - Vortex Keytar (capture): out 1">
-      <connection
-port="a2j:MIDI ROUTER - To Venom (playback): MIDI ROUTER - To Venom" />
-    </port>
-    <port name="MIDI ROUTER - Vortex Keytar (capture): out 2">
-      <connection port="GLOBAL-DRUMS:TO IPAD:events-in" />
-    </port>
-    <port name="MIDI ROUTER - Vortex Keytar (capture): out 3">
-      <connection port="hydrogen-midi:RX" />
-    </port>
-    <port name="MIDI ROUTER - Vortex Keytar (capture): out 4">
-    </port>
-    <port name="qlcplus (capture): __QLC__" />
+    <port name="Midi Through [14] (capture): Midi Through Port-0" />
   </client>
-  <client name="Hydrogen">
-    <port name="out_L">
+  <client name="TO IPAD">
+    <port name="events-out" />
+  </client>
+  <client name="Fabla-Toms">
+    <port name="Audio Output Left">
       <connection port="system:playback_1" />
       <connection port="system:playback_2" />
     </port>
-    <port name="out_R">
-      <connection port="system:playback_2" />
-      <connection port="GLOBAL-EFFECTS:GLOBAL REVERB:In L" />
+    <port name="Audio Output Right">
+      <connection port="GLOBAL REVERB:In L" />
     </port>
   </client>
-  <client name="hydrogen-midi">
-    <port name="TX" />
+  <client name="a2j">
+    <port name="MIDI ROUTER - To Venom [128] (capture): out 1" />
+    <port name="MIDI ROUTER - To Venom [128] (capture): out 2" />
+    <port name="QmidiNet [129] (capture): port 0" />
+    <port name="MIDI ROUTER - Drums IN [130] (capture): out 1" />
+    <port name="MIDI ROUTER - Drums IN [130] (capture): out 2" />
+    <port name="MIDI ROUTER - Drums IN [130] (capture): out 3" />
+    <port name="MIDI ROUTER - Drums IN [130] (capture): out 4" />
+    <port name="MIDI ROUTER - Drums IN [130] (capture): out 5" />
+    <port name="MIDI ROUTER - Vortex Keytar [131] (capture): out 1">
+      <connection port="REAPER:MIDI Input 1" />
+    </port>
+    <port name="MIDI ROUTER - Vortex Keytar [131] (capture): out 2">
+      <connection port="REAPER:MIDI Input 2" />
+    </port>
+    <port name="MIDI ROUTER - Vortex Keytar [131] (capture): out 3" />
+    <port name="MIDI ROUTER - Vortex Keytar [131] (capture): out 4" />
   </client>
 </jack>
+</aj-snapshot>

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- Calf Reverb -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GLOBAL REVERB</Name>
+   <URI>http://calf.sourceforge.net/plugins/Reverb</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Decay time</Name>
+    <Symbol>decay_time</Symbol>
+    <Value>0.656194984912872</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>High Frq Damp</Name>
+    <Symbol>hf_damp</Symbol>
+    <Value>8528.3642578125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Room size</Name>
+    <Symbol>room_size</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Diffusion</Name>
+    <Symbol>diffusion</Symbol>
+    <Value>0.804000020027161</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Wet Amount</Name>
+    <Symbol>amount</Symbol>
+    <Value>1.65634095668793</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Dry Amount</Name>
+    <Symbol>dry</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Pre Delay</Name>
+    <Symbol>predelay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Bass Cut</Name>
+    <Symbol>bass_cut</Symbol>
+    <Value>1572.95288085938</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Treble Cut</Name>
+    <Symbol>treble_cut</Symbol>
+    <Value>2957.80834960938</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Through -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>To BASS</Name>
+   <Label>midithrough</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>a2j:MIDI ROUTER - Vortex Keytar (capture): out 2</Source>
+   <Target>GLOBAL-DRUMS:TO IPAD:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>a2j:MIDI ROUTER - To Venom (capture): out 1</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 1</Target>
+  </Connection>
+  <Connection>
+   <Source>drumkv1:out_1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>drumkv1:out_2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:TO IPAD:events-out</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 3</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:TO IPAD:events-out</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 2</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:Fabla-Toms:Audio Output Left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-DRUMS:Fabla-Toms:Audio Output Right</Source>
+   <Target>GLOBAL-EFFECTS:GLOBAL REVERB:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-EFFECTS:GLOBAL REVERB:Out L</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>GLOBAL-EFFECTS:GLOBAL REVERB:Out L</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>jack_midi_clock:mclk_out</Source>
+   <Target>a2j:MT4 (playback): MT4 Broadcast</Target>
+  </Connection>
+  <Connection>
+   <Source>jack_midi_clock-01:mclk_out</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla.nDPAG:Fabla:Audio Output Left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 1</Source>
+   <Target>a2j:MIDI ROUTER - To Venom (playback): MIDI ROUTER - To Venom</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 2</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 2</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 3</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 3</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 4</Source>
+   <Target>a2j:MT4 (playback): MT4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 5</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 1</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 8</Source>
+   <Target>a2j:MidiSport 4x4 (playback): MidiSport 4x4 MIDI 4</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 9</Source>
+   <Target>drumkv1:in</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 10</Source>
+   <Target>GLOBAL-DRUMS:Fabla-Toms:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 16</Source>
+   <Target>a2j:Midi Through (playback): Midi Through Port-0</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:MIDI Output 17</Source>
+   <Target>Carla.nDPAG:Fabla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:out3</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>REAPER:out4</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
